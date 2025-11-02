@@ -8,18 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; }
     .tag{ @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium border; }
     .card{ @apply rounded-2xl border bg-white/70 backdrop-blur shadow-sm hover:shadow-lg transition; }
-    .section-title{ @apply text-2xl sm:text-3xl font-extrabold tracking-tight; }
+    .section-title{ @apply text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-4; }
     .chip{ @apply inline-flex items-center text-xs border rounded-full px-2 py-1; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
-  <!-- Header / Hero -->
   <header class="relative">
     <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700"></div>
     <div class="relative max-w-6xl mx-auto px-6 pt-10 pb-16 sm:pb-24 text-white">
@@ -40,7 +38,7 @@
           <div class="inline-flex items-center gap-2 text-xs bg-white/10 rounded-full px-3 py-1 ring-1 ring-white/20">
             <span>Robotics</span><span>•</span><span>Automatic Control</span><span>•</span><span>AI</span>
           </div>
-          <h1 class="mt-4 text-4xl sm:text-5xl font-black leading-tight">Ahmed Nassim Bellila</h1>
+          <h1 class="mt-4 text-5xl sm:text-6xl font-black leading-tight">Ahmed Nassim Bellila</h1>
           <p class="mt-4 text-white/90 max-w-2xl">PhD candidate en robotique et automatique. Je conçois des stratégies de <span class="font-semibold">commande prédictive (MPC)</span> pour <span class="font-semibold">robots parallèles à câbles (CDPR)</span>, en intégrant <span class="font-semibold">optimisation</span> et <span class="font-semibold">IA</span> pour rapprocher théorie et applications réelles.</p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="#projects" class="inline-flex items-center rounded-xl bg-white text-slate-900 px-4 py-2 font-semibold shadow hover:shadow-md">Voir mes projets</a>
@@ -49,7 +47,6 @@
         </div>
         <div class="sm:col-span-2">
           <div class="aspect-square rounded-3xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
-            <!-- Remplacez l'image ci-dessous par la vôtre: /assets/me.jpg -->
             <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1200&auto=format&fit=crop" alt="Portrait" class="w-full h-full object-cover"/>
           </div>
           <div class="mt-4 grid grid-cols-3 gap-2 text-[11px] text-white/80">
@@ -60,6 +57,12 @@
       </div>
     </div>
   </header>
+
+  <!-- Toutes les sections suivantes utiliseront la classe .section-title avec texte bold et taille agrandie -->
+
+</body>
+</html>
+
 
   <!-- Contact quick bar -->
   <section class="bg-white border-b">
