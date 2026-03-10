@@ -1,329 +1,414 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ahmed Nassim Bellila — Robotics • Control • AI • Model-based design simulation</title>
-<meta name="description" content="Portfolio de Ahmed Nassim Bellila — PhD candidate en robotique et commande, spécialisé MPC, CDPR, optimisation et IA." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; }
-.tag{ @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium border; }
-.card{ @apply rounded-2xl border bg-white/70 backdrop-blur shadow-sm hover:shadow-lg transition; }
-.section-title{ @apply text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-4; }
-.chip{ @apply inline-flex items-center text-xs border rounded-full px-2 py-1; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Nassim Bellila | Robotics, Control & AI</title>
+  <meta name="description" content="Portfolio of Ahmed Nassim Bellila, PhD candidate in robotics and automatic control, specialized in MPC, CDPR, optimization, and AI for high-precision robotic systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#1e1b4b'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2, 6, 23, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .card {
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(148,163,184,0.18);
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 9999px;
+      padding: .45rem .8rem;
+      font-size: .78rem;
+      font-weight: 500;
+      color: #334155;
+      background: rgba(255,255,255,0.75);
+    }
+    .section-title {
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      color: #0f172a;
+    }
+    .section-copy {
+      color: #475569;
+      max-width: 48rem;
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
-<header class="relative">
-<div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700"></div>
-<div class="relative max-w-6xl mx-auto px-6 pt-10 pb-16 sm:pb-24 text-white">
-<nav class="flex items-center justify-between">
-<a href="#" class="font-extrabold text-lg">ANB</a>
-<div class="hidden sm:flex gap-6 text-sm text-white/90">
-<a href="#about" class="hover:text-white">À propos</a>
-<a href="#skills" class="hover:text-white">Compétences</a>
-<a href="#experience" class="hover:text-white">Expériences</a>
-<a href="#projects" class="hover:text-white">Projets</a>
-<a href="#education" class="hover:text-white">Formation</a>
-<a href="#contact" class="hover:text-white">Contact</a>
-</div>
-</nav>
+<body>
+  <header class="relative overflow-hidden bg-slate-950 text-white">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(99,102,241,0.35),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.25),_transparent_28%),linear-gradient(135deg,#020617,#0f172a_55%,#1e293b)]"></div>
+    <div class="relative max-w-7xl mx-auto px-6 py-6 lg:px-8">
+      <nav class="flex items-center justify-between">
+        <a href="#top" class="text-lg font-extrabold tracking-tight">ANB</a>
+        <div class="hidden md:flex items-center gap-6 text-sm text-white/80">
+          <a href="#about" class="hover:text-white transition">About</a>
+          <a href="#expertise" class="hover:text-white transition">Expertise</a>
+          <a href="#experience" class="hover:text-white transition">Experience</a>
+          <a href="#projects" class="hover:text-white transition">Projects</a>
+          <a href="#education" class="hover:text-white transition">Education</a>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+      </nav>
 
+      <div class="grid lg:grid-cols-12 gap-10 items-center pt-14 pb-16 lg:pt-20 lg:pb-24">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-medium text-white/90 backdrop-blur">
+            Robotics · Automatic Control · AI · Optimization
+          </div>
+          <h1 class="mt-6 text-5xl font-black leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+            Ahmed Nassim Bellila
+          </h1>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-white/80 sm:text-xl">
+            PhD candidate in robotics and automatic control, developing advanced control strategies for cable-driven parallel robots, with a focus on <strong class="text-white">Model Predictive Control</strong>, <strong class="text-white">high-fidelity modeling</strong>, and <strong class="text-white">real-world robotic performance</strong>.
+          </p>
 
-<div class="mt-12 grid gap-8 sm:grid-cols-5 sm:items-center">
-<div class="sm:col-span-3">
-<div class="inline-flex items-center gap-2 text-xs bg-white/10 rounded-full px-3 py-1 ring-1 ring-white/20">
-<span>Robotics</span><span>•</span><span>Automatic Control</span><span>•</span><span>AI</span>
-</div>
-<h1 class="mt-4 text-5xl sm:text-6xl font-black leading-tight">Ahmed Nassim Bellila</h1>
-<p class="mt-4 text-white/90 max-w-2xl">PhD candidate en robotique et automatique. Je conçois des stratégies de <span class="font-semibold">commande prédictive (MPC)</span> pour <span class="font-semibold">robots parallèles à câbles (CDPR)</span>, en intégrant <span class="font-semibold">optimisation</span> et <span class="font-semibold">IA</span> pour rapprocher théorie et applications réelles.</p>
-<div class="mt-6 flex flex-wrap gap-3">
-<a href="#projects" class="inline-flex items-center rounded-xl bg-white text-slate-900 px-4 py-2 font-semibold shadow hover:shadow-md">Voir mes projets</a>
-<a href="#cv" class="inline-flex items-center rounded-xl border border-white/30 px-4 py-2 font-semibold hover:bg-white/10">Télécharger mon CV</a>
-</div>
-</div>
-<div class="sm:col-span-2">
-<div class="aspect-square rounded-3xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
-<img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1200&auto=format&fit=crop" alt="Portrait" class="w-full h-full object-cover"/>
-</div>
-<div class="mt-4 grid grid-cols-3 gap-2 text-[11px] text-white/80">
-<span class="chip">MPC</span><span class="chip">CDPR</span><span class="chip">Optimisation</span>
-<span class="chip">Robust Control</span><span class="chip">ROS</span><span class="chip">PyTorch</span>
-</div>
-</div>
-</div>
-</div>
-</header>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 font-semibold text-slate-900 shadow-soft transition hover:-translate-y-0.5">
+              View Projects
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center rounded-2xl border border-white/20 px-5 py-3 font-semibold text-white/90 transition hover:bg-white/10">
+              Contact Me
+            </a>
+            <a href="assets/CV_AhmedNassimBellila.pdf" class="inline-flex items-center justify-center rounded-2xl border border-white/20 px-5 py-3 font-semibold text-white/90 transition hover:bg-white/10" download>
+              Download CV
+            </a>
+          </div>
 
+          <div class="mt-8 flex flex-wrap gap-3 text-sm text-white/75">
+            <span class="chip !border-white/20 !bg-white/10 !text-white/90">Clermont-Ferrand, France</span>
+            <a class="chip !border-white/20 !bg-white/10 !text-white/90" href="mailto:ahmed.nassim.bellila@gmail.com">ahmed.nassim.bellila@gmail.com</a>
+            <a class="chip !border-white/20 !bg-white/10 !text-white/90" href="https://github.com/DeathstrokeN" target="_blank" rel="noopener">GitHub</a>
+            <a class="chip !border-white/20 !bg-white/10 !text-white/90" href="https://gitlab.com/DeathstrokeN" target="_blank" rel="noopener">GitLab</a>
+            <a class="chip !border-white/20 !bg-white/10 !text-white/90" href="https://www.linkedin.com/in/bellila-ahmed-nassim-3aaa5618a/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
 
-<!-- Toutes les sections suivantes utiliseront la classe .section-title avec texte bold et taille agrandie -->
-
-
-</body>
-</html>
-
-
-  <!-- Contact quick bar -->
-  <section class="bg-white border-b">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center gap-4 text-sm">
-      <a class="chip" href="mailto:ahmed.nassim.bellila@gmail.com">ahmed.nassim.bellila@gmail.com</a>
-      <span class="chip">Clermont-Ferrand, France</span>
-      <a class="chip" href="https://github.com/DeathstrokeN" target="_blank" rel="noopener">GitHub</a>
-      <a class="chip" href="https://gitlab.com/DeathstrokeN" target="_blank" rel="noopener">GitLab</a>
-      <a class="chip" href="https://www.linkedin.com/in/bellila-ahmed-nassim-3aaa5618a/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="chip" href="#cv">CV (PDF)</a>
+        <div class="lg:col-span-5">
+          <div class="card overflow-hidden p-4 bg-white/10 border-white/10">
+            <div class="aspect-[4/5] overflow-hidden rounded-3xl bg-slate-900">
+              <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1200&auto=format&fit=crop" alt="Profile portrait placeholder" class="h-full w-full object-cover" />
+            </div>
+            <div class="grid grid-cols-2 gap-3 pt-4 text-sm text-white/90">
+              <div class="rounded-2xl bg-white/10 p-4">
+                <p class="text-white/60">Main focus</p>
+                <p class="mt-1 font-semibold">Robotics Control</p>
+              </div>
+              <div class="rounded-2xl bg-white/10 p-4">
+                <p class="text-white/60">Specialty</p>
+                <p class="mt-1 font-semibold">MPC for CDPRs</p>
+              </div>
+              <div class="rounded-2xl bg-white/10 p-4">
+                <p class="text-white/60">Tools</p>
+                <p class="mt-1 font-semibold">MATLAB · Python</p>
+              </div>
+              <div class="rounded-2xl bg-white/10 p-4">
+                <p class="text-white/60">Applications</p>
+                <p class="mt-1 font-semibold">Additive Manufacturing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </header>
 
-  <!-- About -->
-  <section id="about" class="max-w-6xl mx-auto px-6 py-16">
-    <h2 class="section-title">À propos</h2>
-    <p class="mt-4 max-w-3xl text-slate-700 leading-relaxed">Je m'intéresse à la <strong>commande optimale</strong> et <strong>robuste</strong> pour systèmes contraints, à la <strong>modélisation haute-fidélité</strong> de robots parallèles à câbles, et à l'usage de l'<strong>IA</strong> pour l'estimation/vision. Mon objectif : <em>des robots précis (&lt; 0.1 mm), efficaces et sûrs</em> pour la fabrication additive et la manipulation.</p>
-    <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
-      <li class="card p-4">2+ ans sur MPC temps-réel (tensions des câbles, contraintes, mRPI, tube MPC).</li>
-      <li class="card p-4">Expériences multi-labos (LIRMM, IP Clermont, LS2N, IMN) et industrie (IRT Jules Verne, BBA Consultants).</li>
-      <li class="card p-4">Développement MATLAB/Simulink, Python (numpy, scipy, casadi), C++.</li>
-      <li class="card p-4">Vision/IA : OpenCV, PyTorch, RL pour planification et contrôle.</li>
-    </ul>
-  </section>
+  <main>
+    <section id="about" class="max-w-7xl mx-auto px-6 py-20 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700">About</p>
+          <h2 class="section-title mt-3">Research-driven engineering with strong applied focus.</h2>
+        </div>
+        <div class="lg:col-span-8">
+          <p class="section-copy text-lg leading-8">
+            I work at the intersection of <strong>robotics</strong>, <strong>advanced control</strong>, <strong>optimization</strong>, and <strong>AI-assisted perception</strong>. My current PhD research focuses on improving the accuracy of cable-driven parallel robots through predictive control, stiffness-aware modeling, and realistic simulation frameworks.
+          </p>
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <div class="card p-6">
+              <h3 class="text-base font-semibold">What I build</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">Control algorithms, simulation tools, and model-based methods for constrained robotic systems operating under real physical limitations.</p>
+            </div>
+            <div class="card p-6">
+              <h3 class="text-base font-semibold">What I optimize</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">Tracking precision, feasibility under tension constraints, robustness to uncertainty, and deployability for real robotic platforms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="bg-white border-y">
-    <div class="max-w-6xl mx-auto px-6 py-16">
-      <h2 class="section-title">Compétences clés</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="card p-6">
-          <h3 class="font-bold">Robotics & Control</h3>
-          <ul class="mt-3 text-sm space-y-2 list-disc list-inside">
-            <li>Model Predictive Control (linéaire, robuste en tube)</li>
-            <li>CDPR : modélisation élastique, distribution de tensions</li>
-            <li>Optimisation convexe / non-convexe, CasADi</li>
-            <li>Estimation d'état (EKF), identification</li>
+    <section id="expertise" class="border-y border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-20 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700">Expertise</p>
+        <h2 class="section-title mt-3">Core skills</h2>
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <article class="card p-7">
+            <h3 class="text-lg font-bold">Robotics & Control</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+              <li>Model Predictive Control (linear, nonlinear, robust)</li>
+              <li>Cable-driven parallel robots and tension distribution</li>
+              <li>Tube MPC, invariant sets, constrained systems</li>
+              <li>State estimation, modeling, and simulation</li>
+            </ul>
+          </article>
+          <article class="card p-7">
+            <h3 class="text-lg font-bold">Optimization & Scientific Computing</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+              <li>MATLAB / Simulink for simulation and control design</li>
+              <li>Python, NumPy, SciPy, CasADi</li>
+              <li>Quadratic programming and numerical optimization</li>
+              <li>High-fidelity modeling for dynamic systems</li>
+            </ul>
+          </article>
+          <article class="card p-7">
+            <h3 class="text-lg font-bold">AI & Vision</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+              <li>OpenCV and camera-based perception basics</li>
+              <li>PyTorch and learning-based prototyping</li>
+              <li>Image restoration and object detection projects</li>
+              <li>AI-assisted approaches for planning and control</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="max-w-7xl mx-auto px-6 py-20 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700">Experience</p>
+      <h2 class="section-title mt-3">Academic and applied research path</h2>
+      <div class="mt-10 space-y-6">
+        <article class="card p-7">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <h3 class="text-xl font-bold">PhD Candidate — INP Clermont Auvergne · LIRMM · Institut Pascal</h3>
+              <p class="mt-2 text-sm text-slate-500">September 2023 — Present</p>
+            </div>
+            <span class="chip">High-precision robotics</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-slate-600">Development of predictive control strategies for cable-driven parallel robots aimed at high-accuracy additive manufacturing applications.</p>
+          <ul class="mt-4 grid gap-2 text-sm leading-7 text-slate-600 sm:grid-cols-2">
+            <li>Designed RT-MPC strategies with cable tension constraints.</li>
+            <li>Integrated cable elasticity and stiffness considerations into simulation and control.</li>
+            <li>Worked on robust formulations including tube MPC and invariant set computation.</li>
+            <li>Developed MATLAB/Simulink and Python/CasADi prototypes.</li>
           </ul>
+        </article>
+
+        <article class="card p-7">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <h3 class="text-xl font-bold">Research Engineer — IRT Jules Verne · LS2N · IMN, Nantes</h3>
+              <p class="mt-2 text-sm text-slate-500">October 2022 — August 2023</p>
+            </div>
+            <span class="chip">WAAM optimization</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-slate-600">Worked on robotic wire arc additive manufacturing process optimization and contributed to teaching in automatic control and robotics.</p>
+        </article>
+
+        <article class="card p-7">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <h3 class="text-xl font-bold">Research Intern — LIRMM, Montpellier</h3>
+              <p class="mt-2 text-sm text-slate-500">October 2021 — August 2022</p>
+            </div>
+            <span class="chip">MPC & modeling</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-slate-600">Worked on constrained MPC for planar cable-driven robots and on modeling/control of a cable-and-thruster underwater robot.</p>
+        </article>
+
+        <article class="card p-7">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <h3 class="text-xl font-bold">Researcher — LOOP · BBA Consultants, Quebec</h3>
+              <p class="mt-2 text-sm text-slate-500">August 2020 — July 2021</p>
+            </div>
+            <span class="chip">Simulation & AI</span>
+          </div>
+          <p class="mt-4 text-sm leading-7 text-slate-600">Carried out comparative simulation studies in MATLAB/Simulink on classical MPC and AI-inspired predictive strategies.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="border-y border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-20 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700">Projects</p>
+        <h2 class="section-title mt-3">Selected work</h2>
+        <p class="section-copy mt-4 text-lg">A recruiter-friendly selection focused on technical depth, outcomes, and relevance to robotics and control engineering roles.</p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="card p-6">
+            <h3 class="text-lg font-bold">RT-MPC for elastic cable-driven parallel robots</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Predictive control strategy handling cable tension constraints, feasible allocation, and trajectory tracking under cable elasticity.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">MATLAB</span>
+              <span class="chip">Simulink</span>
+              <span class="chip">CasADi</span>
+              <span class="chip">Tube MPC</span>
+            </div>
+          </article>
+
+          <article class="card p-6">
+            <h3 class="text-lg font-bold">Open-source CDPR simulator</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">A complete simulation framework including kinematics, Newton–Euler dynamics, cable elasticity, and tension distribution strategies.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">MATLAB</span>
+              <span class="chip">Dynamics</span>
+              <span class="chip">Simulation</span>
+            </div>
+          </article>
+
+          <article class="card p-6">
+            <h3 class="text-lg font-bold">Fast tension distribution solver</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Real-time quadratic programming approach for cable tension allocation under Tmin/Tmax constraints and smooth control variation objectives.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">QP</span>
+              <span class="chip">Optimization</span>
+              <span class="chip">Real-time</span>
+            </div>
+          </article>
+
+          <article class="card p-6">
+            <h3 class="text-lg font-bold">WAAM path planning and process optimization</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Trajectory and process optimization for robotic additive manufacturing workflows with a focus on efficiency and deployment realism.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">WAAM</span>
+              <span class="chip">Optimization</span>
+              <span class="chip">Robotics</span>
+            </div>
+          </article>
+
+          <article class="card p-6">
+            <h3 class="text-lg font-bold">Vision-based robotics prototypes</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Camera calibration, image-based control, and object-detection-oriented experiments using OpenCV and deep learning tools.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">OpenCV</span>
+              <span class="chip">PyTorch</span>
+              <span class="chip">Perception</span>
+            </div>
+          </article>
+
+          <article class="card p-6">
+            <h3 class="text-lg font-bold">Robust tube MPC tools</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">Python tooling for invariant set computation, constraint tightening, and reproducible robust predictive control workflows.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Python</span>
+              <span class="chip">SciPy</span>
+              <span class="chip">Robust Control</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="max-w-7xl mx-auto px-6 py-20 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700">Education</p>
+      <h2 class="section-title mt-3">Training</h2>
+      <div class="mt-10 grid gap-5">
+        <div class="card p-6">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <strong class="text-lg">PhD in Robotics and Automatic Control</strong>
+            <span class="text-sm text-slate-500">INP Clermont Auvergne · 2023 — Present</span>
+          </div>
         </div>
         <div class="card p-6">
-          <h3 class="font-bold">AI & Vision</h3>
-          <ul class="mt-3 text-sm space-y-2 list-disc list-inside">
-            <li>PyTorch, scikit-learn, RL (basics)</li>
-            <li>OpenCV, calibration caméra, asservissement visuel</li>
-            <li>Restauration d'images, détection d'objets</li>
-          </ul>
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <strong class="text-lg">Master 2 in Automatic Control & Robotics</strong>
+            <span class="text-sm text-slate-500">University of Montpellier · 2021 — 2022</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600">Ranked 5th.</p>
         </div>
         <div class="card p-6">
-          <h3 class="font-bold">Stack Technique</h3>
-          <ul class="mt-3 text-sm space-y-2 list-disc list-inside">
-            <li>MATLAB/Simulink, Python, C/C++</li>
-            <li>ROS 1/2 (bases), TwinCAT, Grafcet</li>
-            <li>Linux/Ubuntu, Git/GitHub, LaTeX</li>
-          </ul>
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <strong class="text-lg">Exchange MSc in Industrial Systems Control</strong>
+            <span class="text-sm text-slate-500">Laval University · 2020 — 2021</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600">Excellence label.</p>
+        </div>
+        <div class="card p-6">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <strong class="text-lg">MSc in GEII, Automatic Control & Embedded Systems</strong>
+            <span class="text-sm text-slate-500">ENST, Algiers · 2016 — 2021</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600">Ranked 2nd.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience -->
-  <section id="experience" class="max-w-6xl mx-auto px-6 py-16">
-    <h2 class="section-title">Expériences</h2>
-    <div class="mt-6 grid gap-6">
-      <article class="card p-6">
-        <header class="flex items-center justify-between gap-4">
-          <h3 class="font-semibold">Doctorant — INP Clermont Auvergne · LIRMM & Institut Pascal</h3>
-          <span class="text-xs text-slate-500">sept. 2023 — présent</span>
-        </header>
-        <p class="mt-2 text-sm">Commande prédictive de CDPR pour fabrication additive. Intégration de la raideur variable, contraintes de tension, et précision &lt; 0.1 mm.</p>
-        <ul class="mt-3 text-sm grid sm:grid-cols-2 gap-2 list-disc list-inside">
-          <li>Conception d'un RT-MPC avec contraintes de tension et variations minimisées.</li>
-          <li>Modélisation dynamique incluant élasticité des câbles; calcul mRPI et tube MPC.</li>
-          <li>Simulation MATLAB/Simulink, implémentation C++/Python prototypes CasADi.</li>
-        </ul>
-      </article>
-      <article class="card p-6">
-        <header class="flex items-center justify-between gap-4">
-          <h3 class="font-semibold">Chercheur — IRT Jules Verne · LS2N & IMN, Nantes</h3>
-          <span class="text-xs text-slate-500">oct. 2022 — août 2023</span>
-        </header>
-        <p class="mt-2 text-sm">Optimisation du procédé WAAM robotisé. Activités d'enseignement : commande linéaire et robots manipulateurs (IUT Nantes).</p>
-      </article>
-      <article class="card p-6">
-        <header class="flex items-center justify-between gap-4">
-          <h3 class="font-semibold">Stagiaire — LIRMM, Montpellier</h3>
-          <span class="text-xs text-slate-500">oct. 2021 — août 2022</span>
-        </header>
-        <ul class="mt-2 text-sm list-disc list-inside space-y-1">
-          <li>Commande MPC d'un CDPR plan (planification + suivi sous contraintes).</li>
-          <li>Modélisation/commande d'un ROV à câbles + propulseurs (sous-marin).</li>
-        </ul>
-      </article>
-      <article class="card p-6">
-        <header class="flex items-center justify-between gap-4">
-          <h3 class="font-semibold">Chercheur — LOOP · BBA Consultants (QC, Canada)</h3>
-          <span class="text-xs text-slate-500">août 2020 — juil. 2021</span>
-        </header>
-        <p class="mt-2 text-sm">Étude comparative en simulation (MATLAB/Simulink) : MPC vs MPC basé IA.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="bg-white border-y">
-    <div class="max-w-6xl mx-auto px-6 py-16">
-      <h2 class="section-title">Projets sélectionnés</h2>
-      <p class="mt-2 text-sm text-slate-600">Une sélection orientée recruteur : impact, résultats, technologies.</p>
-
-      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project Card Template -->
-        <article class="card p-5 flex flex-col">
-          <h3 class="font-semibold">RT-MPC pour CDPR avec câbles élastiques</h3>
-          <p class="mt-2 text-sm flex-1">Suivi de trajectoire &lt; 0.2 mm avec contraintes de tension et minimisation des variations. Implémentation MATLAB/Simulink + prototypes CasADi.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="chip">MATLAB</span><span class="chip">CasADi</span><span class="chip">mRPI</span><span class="chip">Tube MPC</span>
-          </div>
-        </article>
-
-        <article class="card p-5 flex flex-col">
-          <h3 class="font-semibold">Bibliothèque « robust-tube-mpc » (open-source)</h3>
-          <p class="mt-2 text-sm flex-1">Outils Python pour calcul d'ensembles invariants, resserrement de contraintes et synthèse tube-MPC. Exemples reproductibles.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="chip">Python</span><span class="chip">NumPy</span><span class="chip">SciPy</span>
-          </div>
-        </article>
-
-        <article class="card p-5 flex flex-col">
-          <h3 class="font-semibold">Optimisation WAAM : planification de cordons</h3>
-          <p class="mt-2 text-sm flex-1">Réduction du temps de cycle de 18 % via optimisation de trajectoires robot et paramètres procédé.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="chip">Robotics</span><span class="chip">Optimisation</span><span class="chip">CoppeliaSim</span>
-          </div>
-        </article>
-
-        <article class="card p-5 flex flex-col">
-          <h3 class="font-semibold">Asservissement visuel pour robot mobile</h3>
-          <p class="mt-2 text-sm flex-1">Calibration caméra, détection d'objets et boucle de contrôle image-based (IBVS).</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="chip">OpenCV</span><span class="chip">PyTorch</span>
-          </div>
-        </article>
-
-        <article class="card p-5 flex flex-col">
-          <h3 class="font-semibold">Simulateur CDPR open-source (MATLAB)</h3>
-          <p class="mt-2 text-sm flex-1">Modélisation complète : cinématique, dynamique Newton–Euler, élasticité, distribution de tensions.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="chip">MATLAB</span><span class="chip">Simulink</span>
-          </div>
-        </article>
-
-        <article class="card p-5 flex flex-col">
-          <h3 class="font-semibold">Restauration d'images anciennes (Deep Learning)</h3>
-          <p class="mt-2 text-sm flex-1">Pipeline PyTorch pour débruitage, inpainting et super-résolution — démo web.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="chip">PyTorch</span><span class="chip">Vision</span>
-          </div>
-        </article>
-
-        <article class="card p-5 flex flex-col">
-          <h3 class="font-semibold">Package ROS2 pour CDPR (proto)</h3>
-          <p class="mt-2 text-sm flex-1">Noeuds ROS2 : cinématique inverse, allocation de tensions, streaming d'état.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="chip">ROS2</span><span class="chip">C++</span>
-          </div>
-        </article>
-
-        <article class="card p-5 flex flex-col">
-          <h3 class="font-semibold">Contrôle MPC d'une soufflerie colonne</h3>
-          <p class="mt-2 text-sm flex-1">Régulation précise de la vitesse d'écoulement sous contraintes d'actionneur.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="chip">MPC</span><span class="chip">Process Control</span>
-          </div>
-        </article>
-
-        <article class="card p-5 flex flex-col">
-          <h3 class="font-semibold">Solveur rapide de distribution de tensions</h3>
-          <p class="mt-2 text-sm flex-1">QP temps réel pour allocation de tensions avec bornes (Tmin/Tmax) et minimisation des variations.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="chip">QP</span><span class="chip">Numérique</span>
-          </div>
-        </article>
-      </div>
-
-      <p class="mt-8 text-xs text-slate-500"></p>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="max-w-6xl mx-auto px-6 py-16">
-    <h2 class="section-title">Formation</h2>
-    <div class="mt-6 grid gap-4">
-      <div class="card p-5">
-        <div class="flex items-center justify-between">
-          <strong>Master 2 — Automatique & Robotique (EN)</strong>
-          <span class="text-xs text-slate-500">Univ. Montpellier · 2021–2022</span>
-        </div>
-        <p class="text-sm mt-1">Classement : 5ᵉ</p>
-      </div>
-      <div class="card p-5">
-        <div class="flex items-center justify-between">
-          <strong>Échange MSc — Automatique et commande des systèmes industriels</strong>
-          <span class="text-xs text-slate-500">Laval Univ. (QC) · 2020–2021</span>
-        </div>
-        <p class="text-sm mt-1">Label d'excellence</p>
-      </div>
-      <div class="card p-5">
-        <div class="flex items-center justify-between">
-          <strong>MSc — GEII, Automatique & Systèmes Embarqués</strong>
-          <span class="text-xs text-slate-500">ENST, Alger · 2016–2021</span>
-        </div>
-        <p class="text-sm mt-1">Classement : 2ᵉ</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CV download -->
-  <section id="cv" class="bg-white border-y">
-    <div class="max-w-6xl mx-auto px-6 py-16">
-      <h2 class="section-title">CV</h2>
-      <p class="mt-2 text-sm text-slate-600">Version PDF adaptée au recrutement (fr/EN). Placez votre fichier dans <code>/assets/CV_AhmedNassimBellila.pdf</code>.</p>
-      <a href="assets/CV_AhmedNassimBellila.pdf" class="inline-flex mt-4 rounded-xl bg-slate-900 text-white px-4 py-2 font-semibold" download>Télécharger le CV</a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-6 py-16">
-    <h2 class="section-title">Contact</h2>
-    <div class="mt-4 grid md:grid-cols-2 gap-6">
-      <div class="card p-6">
-        <p>Ouvert à des collaborations de recherche, consulting, et opportunités R&D/Robotics.</p>
-        <ul class="mt-3 space-y-1 text-sm">
-          <li>Email : <a class="underline" href="mailto:ahmed.nassim.bellila@gmail.com">ahmed.nassim.bellila@gmail.com</a></li>
-          <li>LinkedIn : <a class="underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/bellila-ahmed-nassim-3aaa5618a/">profile</a></li>
-          <li>GitHub : <a class="underline" target="_blank" rel="noopener" href="https://github.com/DeathstrokeN">DeathstrokeN</a></li>
-        </ul>
-      </div>
-      <form class="card p-6" onsubmit="event.preventDefault(); alert('Merci ! Votre message a été simulé côté client pour la démo.');">
-        <div class="grid gap-3 text-sm">
+    <section id="contact" class="border-t border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-20 lg:px-8">
+        <div class="grid gap-6 lg:grid-cols-2">
           <div>
-            <label class="block font-medium">Nom</label>
-            <input class="mt-1 w-full border rounded-lg px-3 py-2" placeholder="Votre nom" required>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700">Contact</p>
+            <h2 class="section-title mt-3">Let’s build precise and useful robotic systems.</h2>
+            <p class="section-copy mt-5 text-lg">Open to research collaborations, robotics R&D roles, and engineering opportunities involving control, simulation, and optimization.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="chip" href="mailto:ahmed.nassim.bellila@gmail.com">Email</a>
+              <a class="chip" href="https://github.com/DeathstrokeN" target="_blank" rel="noopener">GitHub</a>
+              <a class="chip" href="https://gitlab.com/DeathstrokeN" target="_blank" rel="noopener">GitLab</a>
+              <a class="chip" href="https://www.linkedin.com/in/bellila-ahmed-nassim-3aaa5618a/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
           </div>
-          <div>
-            <label class="block font-medium">Email</label>
-            <input type="email" class="mt-1 w-full border rounded-lg px-3 py-2" placeholder="votre@email.com" required>
-          </div>
-          <div>
-            <label class="block font-medium">Message</label>
-            <textarea class="mt-1 w-full border rounded-lg px-3 py-2" rows="4" placeholder="Votre message…" required></textarea>
-          </div>
-          <button class="mt-2 inline-flex justify-center rounded-xl bg-slate-900 text-white px-4 py-2 font-semibold">Envoyer</button>
-        </div>
-      </form>
-    </div>
-  </section>
 
-  <footer class="py-10 text-center text-xs text-slate-500">
-    © <span id="year"></span> Ahmed Nassim Bellila — Robotics • Control • AI
+          <div class="card p-7">
+            <form onsubmit="event.preventDefault(); alert('Thanks. This demo form is static for now. Connect it to Formspree, Netlify Forms, or your backend.');" class="space-y-4">
+              <div>
+                <label class="mb-2 block text-sm font-medium text-slate-700">Name</label>
+                <input type="text" placeholder="Your name" class="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-brand-600" required>
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-slate-700">Email</label>
+                <input type="email" placeholder="you@example.com" class="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-brand-600" required>
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-slate-700">Message</label>
+                <textarea rows="5" placeholder="Tell me about your project or opportunity" class="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-brand-600" required></textarea>
+              </div>
+              <button type="submit" class="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-6 py-10 text-center text-sm text-slate-500">
+    © <span id="year"></span> Ahmed Nassim Bellila — Robotics · Control · AI
   </footer>
 
   <script>
